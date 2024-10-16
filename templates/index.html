@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Trends Comparison</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        form { margin: 50px auto; width: 300px; }
+        input, select { width: 100%; padding: 8px; margin: 8px 0; }
+        button { padding: 10px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+<h2 align="center">Google Trends Comparison</h2>
+
+<form action="/compare" method="POST">
+    <label for="keyword1">Keyword 1</label>
+    <input type="text" id="keyword1" name="keyword1" placeholder="Enter first keyword" required>
+
+    <label for="keyword2">Keyword 2</label>
+    <input type="text" id="keyword2" name="keyword2" placeholder="Enter second keyword" required>
+
+    <label for="keyword3">Keyword 3 (Optional)</label>
+    <input type="text" id="keyword3" name="keyword3" placeholder="Enter third keyword">
+
+    <label for="timeframe">Timeframe</label>
+    <select id="timeframe" name="timeframe">
+        <option value="today 12-m">Past 12 months</option>
+        <option value="now 7-d">Past 7 days</option>
+        <option value="now 1-d">Past 1 day</option>
+        <option value="today 5-y">Past 5 years</option>
+        <option value="2004-present">2004 to present</option>
+    </select>
+
+    <button type="submit">Compare Trends</button>
+</form>
+
+</body>
+</html>
